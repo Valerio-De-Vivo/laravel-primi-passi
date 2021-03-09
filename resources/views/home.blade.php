@@ -12,8 +12,8 @@
         <ul style="display: flex; list-style:none">
 
             @foreach ($menu as $menuitem)
-                @if ($menuitem == 'contatti')
-                    <a href=""><li style="padding: 20px; color:red;"> {{$menuitem}} </li></a>
+                @if ($menuitem == 'home')
+                    <a href="/"><li style="padding: 20px; color:rgb(69, 187, 10);"> {{$menuitem}} </li></a>
                 @else
                     <a href="{{$menuitem}}"><li style="padding: 20px"> {{$menuitem}} </li></a>
                 @endif

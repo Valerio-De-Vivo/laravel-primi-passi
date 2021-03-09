@@ -19,7 +19,7 @@ Route::get('/', function () {
         'nome' => 'Valerio',
         'cognome' => 'De Vivo',
 
-        'menu' => ['contatti', 'chi-siamo', 'portfolio']
+        'menu' => ['home', 'chi-siamo', 'portfolio']
     ];
     return view('home', $data);
 });
@@ -31,4 +31,17 @@ Route::get('/chi-siamo', function () {
         'img' => 'https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331256_1280.png'
     ];
     return view('chi-siamo', $data);
+});
+
+Route::get('/portfolio', function () {
+
+    $data = [
+        'img' => [
+            'https://cdn.pixabay.com/photo/2019/07/08/04/23/traveling-4323759_1280.png', 
+            'https://cdn.pixabay.com/photo/2019/06/13/06/02/travel-4270800_1280.png',
+            'https://cdn.pixabay.com/photo/2020/02/05/15/40/natural-4821550_1280.png',
+            'https://cdn.pixabay.com/photo/2021/02/07/23/04/mountains-5993080_1280.png'
+        ]
+    ];
+    return view('portfolio', $data);
 });
