@@ -7,8 +7,22 @@
     <title>Home</title>
 </head>
 <body>
+
+    <nav>
+        <ul style="display: flex; list-style:none">
+
+            @foreach ($menu as $menuitem)
+                @if ($menuitem == 'contatti')
+                    <a href=""><li style="padding: 20px; color:red;"> {{$menuitem}} </li></a>
+                @else
+                    <a href="{{$menuitem}}"><li style="padding: 20px"> {{$menuitem}} </li></a>
+                @endif
+
+            @endforeach
+
+        </ul>
+    </nav>
     <h1> Benvenuto nel sito di {{$nome}} {{$cognome}}</h1>
 
-    
 </body>
 </html>

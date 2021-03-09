@@ -19,7 +19,16 @@ Route::get('/', function () {
         'nome' => 'Valerio',
         'cognome' => 'De Vivo',
 
-        'menu' => ['contatti', 'chi siamo', 'portfolio']
+        'menu' => ['contatti', 'chi-siamo', 'portfolio']
     ];
     return view('home', $data);
+});
+
+Route::get('/chi-siamo', function () {
+
+    $data = [
+        'text' => ['team1', 'team2', 'team3'],
+        'img' => 'https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331256_1280.png'
+    ];
+    return view('chi-siamo', $data);
 });
